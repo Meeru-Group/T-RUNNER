@@ -1,10 +1,11 @@
 THANVI GAME DEV — T RUNNER Android project
 Package: com.thanvigamedev.trunner
-Version: 1.0 (versionCode 1)
+Version: 1.0.0 (versionCode 1)
 Orientation: Landscape
 Network permission: none
 Game runtime: local Android WebView loading app/src/main/assets/index.html
 Storage: browser localStorage on this device for best score
+Branding: custom blue-and-gold THANVI emblem used for launcher icon, splash screen and game menu
 Server/VPS/database: not required
 
 BUILD REQUIREMENTS
