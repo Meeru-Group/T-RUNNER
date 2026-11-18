@@ -1,0 +1,8 @@
+{
+  "name": "T Runner - THANVI GAME DEV",
+  "short_name": "T Runner",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#10182b",
+  "theme_color": "#10182b"
+}

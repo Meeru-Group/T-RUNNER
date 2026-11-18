@@ -1,1 +1,38 @@
-
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#10182b">
+<title>T RUNNER — THANVI GAME DEV</title>
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#10182b;color:#fff;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;touch-action:none}
+#app{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px;background:radial-gradient(ellipse at 50% 20%,#263e69 0,#10182b 65%)}
+header{width:min(960px,100%);display:flex;justify-content:space-between;align-items:center;padding:4px 4px 10px}
+.brand{font-weight:900;letter-spacing:2px;font-size:clamp(16px,3vw,24px)}.brand span{color:#ffd166}.sub{font-size:10px;color:#aab8d3;letter-spacing:2px}
+#hud{display:flex;gap:8px;font-weight:800;font-size:13px} .pill{background:#1b2945;border:1px solid #3d5279;border-radius:12px;padding:7px 11px}
+#stage{width:min(960px,100%);position:relative;border:1px solid #50658c;border-radius:18px;overflow:hidden;box-shadow:0 20px 60px #0008;aspect-ratio:16/9;max-height:72vh;background:#8bd3e6}
+canvas{display:block;width:100%;height:100%}
+.overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;background:#071226aa;padding:20px}
+.panel{max-width:440px;background:#111e36ee;border:1px solid #62779d;border-radius:20px;padding:24px;box-shadow:0 15px 50px #0008}
+h1{margin:0 0 5px;font-size:clamp(28px,6vw,48px);letter-spacing:2px}h1 b{color:#ffd166}.tag{color:#b8c7df;font-size:13px;margin:0 0 18px}
+button{border:0;border-radius:13px;padding:13px 24px;background:linear-gradient(135deg,#ffd166,#ff9f43);color:#172039;font-weight:900;font-size:16px;cursor:pointer;box-shadow:0 5px 0 #b86c2b}
+button:active{transform:translateY(3px);box-shadow:0 2px 0 #b86c2b}
+.hint{font-size:12px;color:#bdcbe1;line-height:1.6;margin-top:14px}
+#touch{display:flex;justify-content:space-between;width:min(960px,100%);padding:12px 4px 0;gap:14px}
+.touchbtn{width:48%;background:#243858;border:1px solid #5c759f;color:white;box-shadow:0 4px 0 #101a2d;user-select:none}
+footer{font-size:10px;color:#7185a8;padding-top:7px;letter-spacing:1px}
+@media (min-width:700px){#touch{display:none}}
+</style>
+</head>
+<body><div id="app">
+<header><div><div class="brand">THANVI <span>GAME DEV</span></div><div class="sub">ORIGINAL OFFLINE ARCADE</div></div><div id="hud"><div class="pill">SCORE <span id="score">0</span></div><div class="pill">BEST <span id="best">0</span></div><div class="pill">🪙 <span id="coins">0</span></div></div></header>
+<div id="stage"><canvas id="game" width="960" height="540" aria-label="T Runner game"></canvas>
+<div class="overlay" id="menu"><div class="panel"><h1>T <b>RUNNER</b></h1><p class="tag">RUN • JUMP • COLLECT • SURVIVE</p><button id="start">START GAME</button><div class="hint">Tap the screen or press SPACE / ↑ to jump.<br>Collect coins. Avoid the obstacles.<br>Your best score is saved on this device.</div></div></div>
+<div class="overlay" id="over" style="display:none"><div class="panel"><h1>GAME <b>OVER</b></h1><p class="tag" id="result">Score: 0</p><button id="again">PLAY AGAIN</button><div class="hint">Try again and beat your best score.</div></div></div>
+</div>
+<div id="touch"><button class="touchbtn" id="jump">JUMP</button><button class="touchbtn" id="pause">PAUSE</button></div>
+<footer>NO INTERNET • NO ACCOUNT • NO SERVER • PROGRESS SAVED LOCALLY</footer>
+</div>
+<script src="game.js"></script></body></html>
